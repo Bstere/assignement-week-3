@@ -1,0 +1,23 @@
+Design Memo
+
+For the Undo/Redo file, I used a custom stack as shown in resource 1 
+stacks follow and use LIFO which mimics undo and redo. 
+The last action that the user does is the first one that they can undo.
+If they redo something it works in the other way too.
+The two stacks that I implemented for undo and redo ensure that every time
+the user does an action, it appears in the redo stack. 
+If the user redo it, it moves back to undo stack, following the flow that we want.
+This is a simple but effective structure. It is effective because it tracks changes 
+in redo and undo so in both directions.
+
+In the Help Desk Ticketing file, I used the Queue class as shown in ressource 2.
+The queues are the opposite they do FIFO. 
+Which is exactly how ticketing business should be working.
+First customer asks for help, he is the first one being helped.
+The front and rear pointer used keeps track of who is next in the help line and also 
+add new customers.
+
+Python built in lists are different because custom Node classes control the order
+data is stored but also accessed. Different from lists the structure is manually made
+with the linked nodes, this help to understand how stacks and queues work and to use the pointers
+between elements. 
